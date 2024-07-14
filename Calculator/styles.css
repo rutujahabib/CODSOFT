@@ -1,0 +1,93 @@
+/* Basic CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: transparent;
+    font-family: Arial, sans-serif;
+}
+
+/* Calculator styling */
+.calculator {
+    width: 100%;
+    max-width: 400px;
+    background-color: #2196f3;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.display {
+    height: 70px;
+    background-color: #e4f2fd;
+    color: black;
+    text-align: right;
+    padding: 20px;
+    font-size: 1.9rem;
+    border-radius: 10px;
+    overflow: hidden;
+    word-wrap: break-word;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+/* Ensure the '0' button spans two columns */
+button {
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 1.5rem;
+    border: none;
+    color: white;
+    background-color: #1565bf;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ddd;
+}
+
+button.operator {
+    background-color: #1565bf;
+}
+
+button.clear {
+    background-color: #ff6347;
+    color: white;
+}
+
+button.equal {
+    grid-column: span 2;
+    background-color: #1565bf;
+    color: white;
+}
+
+/* '0' button should also span two columns and be positioned correctly */
+button.zero {
+    grid-column: span 2;
+    background-color: #007acc;
+}
+
+/* Footer styling */
+footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #333;
+}
